@@ -1,0 +1,18 @@
+
+$wshell = New-Object -ComObject WScript.Shell  
+
+for($i=0; $i -le 5000; $i++){
+
+    $wshell.SendKeys(".")    
+
+    Start-Sleep 3  
+
+    if($i -ne 0 -and $i%100 -eq 0){
+
+        $wshell.SendKeys("~")
+
+    }  
+
+}
+
+ like 1
